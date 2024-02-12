@@ -79,6 +79,8 @@ class ListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 230,
+      width: 200,
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
@@ -87,8 +89,9 @@ class ListItem extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const CircleAvatar(
+          CircleAvatar(
             child: Icon(Icons.image),
+            // child: Image.network('https://picsum.photos/250?image=9'),
           ),
           const SizedBox(width: 10),
           Text(
