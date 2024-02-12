@@ -23,77 +23,125 @@ class _OurServiceState extends State<OurService> {
           ),
         ),
         const SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisSize: MainAxisSize.max,
+        GridView(
+          padding: const EdgeInsets.only(top: 0),
+          shrinkWrap: true,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 0,
+          ),
           children: [
-            const Column(
-              mainAxisSize: MainAxisSize.min,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: Colors.blue,
-                      child: Icon(Icons.calendar_today,
-                          size: 32, color: Colors.white),
+                    Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade200,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black54,
+                              blurRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: Image.asset(
+                          'assets/images/IconServices/appointment-book.png',
+                          height: 55,
+                          width: 55,
+                        ),
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
-                Text(
-                  'Appointment',
-                  style: TextStyle(fontSize: 16),
-                )
+                const Text(
+                  "Appointment",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    height: 3,
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
             Column(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: Colors.blue,
+                    Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade200,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: -3,
                       child: Image.asset(
                         'assets/images/IconServices/doctor.png',
-                        width: 32,
-                        height: 32,
+                        height: 70,
+                        width: 70,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
                 const Text(
-                  'Our Doctors',
-                  style: TextStyle(fontSize: 16),
-                )
+                  "Our Doctors",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    height: 3,
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
             Column(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: Colors.blue,
+                    Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade200,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: -3,
                       child: Image.asset(
                         'assets/images/IconServices/treatments.png',
-                        width: 32,
-                        height: 32,
+                        height: 70,
+                        width: 70,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
                 const Text(
-                  'Treatments',
-                  style: TextStyle(fontSize: 16),
-                )
+                  "Treatments",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    height: 3,
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
           ],

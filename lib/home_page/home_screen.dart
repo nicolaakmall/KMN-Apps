@@ -75,19 +75,38 @@ class HomeScreen extends StatelessWidget {
           ),
           // elevation: 0,
         ),
-        body: const SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  SizedBox(height: 16),
-                  OurService(),
-                  SizedBox(height: 40),
-                  promotion(),
-                  SizedBox(height: 40),
-                  TestimonialWidget(),
-                ],
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              stops: const [
+                0.7,
+                1,
+              ],
+              colors: [
+                Colors.white,
+                Colors.blue.shade200,
+              ],
+            ),
+          ),
+          child: const SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 0),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 16),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      child: OurService(),
+                    ),
+                    SizedBox(height: 40),
+                    promotion(),
+                    SizedBox(height: 40),
+                    TestimonialWidget(),
+                  ],
+                ),
               ),
             ),
           ),

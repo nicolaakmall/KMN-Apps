@@ -15,24 +15,63 @@ class _promotionState extends State<promotion> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Promotion',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Text(
+            'Promotion',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         const SizedBox(height: 20),
-        Container(
-          height: 165,
-          margin: const EdgeInsets.symmetric(horizontal: 8.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            image: const DecorationImage(
-              image: AssetImage(
-                  'assets/images/promotion/Banner-SWA-website-KMN.jpg'),
-              fit: BoxFit.cover,
-            ),
+        SizedBox(
+          height: 200,
+          child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              const SizedBox(
+                width: 16,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Image.asset(
+                  'assets/images/promotion/Banner-SWA-website-KMN.jpg',
+                  fit: BoxFit.cover,
+                  width: 350,
+                  //height: 100,
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Image.asset(
+                  'assets/images/promotion/BAO-Image.jpg',
+                  fit: BoxFit.cover,
+                  width: 350,
+                  //height: 100,
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Image.asset(
+                  'assets/images/promotion/HomePage-LASIK-Promo-Jan24.jpg',
+                  fit: BoxFit.cover,
+                  width: 350,
+                  //height: 100,
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+            ],
           ),
         ),
       ],

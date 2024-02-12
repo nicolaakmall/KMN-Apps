@@ -10,11 +10,14 @@ class TestimonialWidget extends StatelessWidget {
         const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text(
-              'Testimonals',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
+                'Testimonals',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             Row(
@@ -41,24 +44,23 @@ class TestimonialWidget extends StatelessWidget {
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              // Wrap the container with a Card widget
-              Card(
-                elevation: 4, // This gives a slight shadow to the card
-                shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(7), // Keep the border radius
-                ),
+              const SizedBox(
+                width: 16,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(7),
                 child: Container(
                   width: 220,
+                  color: Colors.white,
                   padding: const EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset('assets/images/testimonials/3-ZDQ-RWzyo.png'),
-                      const SizedBox(height: 10),
                       const Text(
                         "Ingrid Wijanarko",
                         style: TextStyle(
+                          height: 2,
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),
@@ -67,31 +69,30 @@ class TestimonialWidget extends StatelessWidget {
                         "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit!\"",
                         style: TextStyle(
                           fontSize: 15,
+                          fontWeight: FontWeight.normal,
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(width: 15),
-              // Repeat for each card
-              Card(
-                elevation: 4, // This gives a slight shadow to the card
-                shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(7), // Keep the border radius
-                ),
+              const SizedBox(
+                width: 15,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(7),
                 child: Container(
                   width: 220,
+                  color: Colors.white,
                   padding: const EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset('assets/images/testimonials/3-ZDQ-RWzyo.png'),
-                      const SizedBox(height: 10), // Added for spacing
+                      Image.asset('assets/images/testimonials/s8PWaSMOdew.png'),
                       const Text(
-                        "Ingrid Wijanarko",
+                        "Rio Matret",
                         style: TextStyle(
+                          height: 2,
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),
@@ -100,29 +101,30 @@ class TestimonialWidget extends StatelessWidget {
                         "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit!\"",
                         style: TextStyle(
                           fontSize: 15,
+                          fontWeight: FontWeight.normal,
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(width: 15),
-              Card(
-                // elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(7),
-                ),
+              const SizedBox(
+                width: 15,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(7),
                 child: Container(
                   width: 220,
+                  color: Colors.white,
                   padding: const EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset('assets/images/testimonials/3-ZDQ-RWzyo.png'),
-                      const SizedBox(height: 10), // Added for spacing
+                      Image.asset('assets/images/testimonials/w0Y8XmFKZtw.png'),
                       const Text(
-                        "Ingrid Wijanarko",
+                        "Edho Zell & Mami El",
                         style: TextStyle(
+                          height: 2,
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),
@@ -131,11 +133,15 @@ class TestimonialWidget extends StatelessWidget {
                         "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit!\"",
                         style: TextStyle(
                           fontSize: 15,
+                          fontWeight: FontWeight.normal,
                         ),
                       ),
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(
+                width: 15,
               ),
             ],
           ),
